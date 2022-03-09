@@ -27,7 +27,7 @@ public class Mypipeline {
 
         @Description("BigQuery table name")
         String getTableName();
-        void setTableName(String TableName);
+        void setTableName(String tableName);
     }
 
     public static void main(String[] args) {
@@ -48,7 +48,7 @@ public class Mypipeline {
     }
     public static final Schema rawSchema = Schema
             .builder()
-            .addIntegerField("id")
+            .addInt64Field("id")
             .addStringField("name")
             .addStringField("surname")
             .build();
