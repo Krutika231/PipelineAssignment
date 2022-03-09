@@ -79,7 +79,7 @@ public class Mypipeline {
                                                                             .build();
                                                                 }
                                                             }
-                )).setRowSchema(rawSchema)
+                )).setRowSchema(rawSchema);
         commonLogs.apply("WriteToBQ",
                         BigQueryIO.<CommonLog>write().to(options.getTableName()).useBeamSchema()
                         .withWriteDisposition(BigQueryIO.Write.WriteDisposition.WRITE_APPEND)
